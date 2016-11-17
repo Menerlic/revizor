@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,500&subset=latin,cyrillic,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
+
+@font-face {
+  font-family: 'Exo 2 Medium Condensed';
+  src: url('../fonts/exotwocondensed/exo2-mediumcondensed.eot');
+  src: url('../fonts/exotwocondensed/exo2-mediumcondensed.woff') format('woff'), url('../fonts/exotwocondensed/exo2-mediumcondensed.woff2') format('woff2'), url('../fonts/exotwocondensed/exo2-mediumcondensed.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo 2 Bold Condensed';
+  src: url('../fonts/exotwocondensed/exo2-boldcondensed.eot');
+  src: url('../fonts/exotwocondensed/exo2-boldcondensed.woff') format('woff'), url('../fonts/exotwocondensed/exo2-boldcondensed.woff2') format('woff2'), url('../fonts/exotwocondensed/exo2-boldcondensed.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url('../fonts/OpenSansSemiBold/OpenSansSemiBold.eot');
+  src: url('../fonts/OpenSansSemiBold/OpenSansSemiBold.woff') format('woff'), url('../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  color: #000000;
+  font-family: "Exo 2","Arial";
+  font-size: 14px;
+  height: 100%;
+}
+
+h2 {
+  color: #444;
+  font-family: "Exo 2 Bold Condensed",Arial;
+  font-size: 36px;
+  line-height: 34px;
+  margin: 47px 0 13px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.header-block{
+  background-color: #517e9b;
+  min-height: 116px;
+  padding: 5px 0;
+}
+
+.header-block ul.nav > li > a,
+.navbar-header a{
+  color: white !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header-block  ul.nav > li > a.active,
+.navbar-header a.active{
+  color: #a9cadf !important;
+  background-color: #517e9b !important; 
+}
+
+header{
+  background-color: #517e9b !important; 
+  border-color: #517e9b !important; 
+  padding: 0 !important;
+}
+
+.footer-block{
+  margin-top: 10px !important;
+  background: #fff none repeat scroll 0 0;
+  border-top: 1px solid #dadada;
+  color: #444;
+  font-family: "Open Sans",Arial;
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+}
+
+.copy {
+  background: rgba(0, 0, 0, 0) url("../images/emblem.png") no-repeat scroll 0 0;
+  height: 62px;
+  padding-left: 89px;
+}
+
+footer{
+  margin-top: 0 !important;
+  padding-top: 54px !important;
+  border-top: none !important;
+}
+
+h1.page-header{
+  font-family: "Exo 2 Medium Condensed",Arial;
+  font-size: 36px;
+  border: none;
+  margin: 22px 0 26px;
+  padding: 0;
+  text-transform: uppercase;
+  color: #517e9b;
+}
+
+.navbar-collapse {
+  padding: 0;
+}
+
+@media only screen and (min-device-width: 700px) {
+	.navbar-collapse li.first a{
+		padding-left:0;
+	}
+
+	.navbar-collapse li.last a{
+		padding-right:0;
+	}
+}
