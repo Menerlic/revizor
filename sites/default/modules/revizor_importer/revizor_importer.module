@@ -1,0 +1,24 @@
+﻿<?php
+
+
+/**
+ * Implements hook_feeds_processor_targets_alter
+ */
+function revizor_importer_feeds_processor_targets_alter(&$targets, $entity_type, $bundle_name) {
+  if ($entity_type == 'node') {
+    $targets['title'] = array(
+      'name' => t('Title. Only for checks'), 
+      'callback' => 'revizor_importer_set_title_target',
+    );
+  }
+}
+
+/**
+ * Allows to generate link to passport and title of the check
+ */
+function revizor_importer_set_title_target($source, $entity, $target, $value, $mapping) {
+  $res = db_query("SELECT COUNT(*) FROM `field_data_field_od_pack_link` WHERE `field_od_pack_link_target_id` =" . $value[0])->fetchField();
+  $num = $res + 1;
+  $entity->{$target} = 'Запись ОД ' . $value[0] . '-' . $num;
+  $entity->field_od_pack_link[LANGUAGE_NONE][0]['target_id'] = $value[0];
+}

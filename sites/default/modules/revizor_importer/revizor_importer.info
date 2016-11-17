@@ -1,0 +1,5 @@
+name = Revizor Importer	
+description = Provides admin to add new types of targets and sources
+core = 7.x
+package = Revizor
+
