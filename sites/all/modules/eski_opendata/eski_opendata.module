@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function eski_opendata_menu() {
+  $items = array();
+  
+  $items['feedback'] = array(
+    'title' => 'Форма отзыва о наборе открытых данных',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('eski_opendata_feedback_form'),
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+function eski_opendata_feedback_form($form, $form_state) {
+	
+  drupal_set_title('Форма отзыва о наборе открытых данных');	
+
+  $breadcrumb = array();
+  $breadcrumb[] = l('Home', '');
+  $breadcrumb[] = l('Открытые данные', 'opendata');
+
+  // Set Breadcrumbs
+  drupal_set_breadcrumb($breadcrumb);
+	
+  $form = array();
+
+  $form['od'] = array(
+    '#title' => 'Укажите название набора открытых данных',
+    '#type' => 'textfield',
+	'#required' => TRUE
+  );
+  
+  $form['notice'] = array(
+    '#markup' => '<p>В&nbsp;целях объективного и&nbsp;всестороннего рассмотрения вашего отызва в&nbsp;установленные сроки, необходимо в&nbsp;тексте отызва указывать адрес страницы описанного вами места действия, факта или события, а&nbsp;также можно указать телефон для возможного уточнения содержания вашего обращения.</p><p>Поле текста отзыва имеет техническое ограничение в&nbsp;5000 символов (с&nbsp;пробелами).</p>',
+  );
+  
+  $form['comment'] = array(
+    '#title' => 'Отзыв',
+    '#type' => 'textarea',
+	'#required' => TRUE
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Направить отзыв',
+  );
+
+  return $form;
+}
+
+function eski_opendata_feedback_form_submit($form, $form_state) {
+	
+}

@@ -1,0 +1,4 @@
+name = ESKI OpenData
+description = Модуль для открытых данных
+package = ESKI
+core = 7.x

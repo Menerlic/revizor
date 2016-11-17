@@ -1,0 +1,32 @@
+diff --git a/includes/simplenews.admin.inc b/includes/simplenews.admin.inc
+index 2c10ee9..eec2563 100644
+--- a/includes/simplenews.admin.inc
++++ b/includes/simplenews.admin.inc
+@@ -553,6 +553,7 @@ function simplenews_admin_category_form($form, &$form_state, $edit = array()) {
+     );
+     $form['simplenews_subject']['token_help']['browser'] = array(
+       '#theme' => 'token_tree',
++      '#dialog' => TRUE,
+       '#token_types' => array('simplenews-category', 'node', 'simplenews-subscriber'),
+     );
+   }
+@@ -1444,6 +1445,7 @@ function simplenews_admin_settings_subscription($form, &$form_state) {
+ 
+     $form['subscription_mail']['token_help']['browser'] = array(
+       '#theme' => 'token_tree',
++      '#dialog' => TRUE,
+       '#token_types' => array('simplenews-category', 'simplenews-subscriber'),
+     );
+   }
+diff --git a/simplenews.module b/simplenews.module
+index f2c2e11..8f476c5 100644
+--- a/simplenews.module
++++ b/simplenews.module
+@@ -779,6 +779,7 @@ function _simplenews_node_form(&$form, $form_state) {
+ 
+     $form['simplenews_token_help']['browser'] = array(
+       '#theme' => 'token_tree',
++      '#dialog' => TRUE,
+       '#token_types' => array('simplenews-category', 'simplenews-subscriber', 'node'),
+     );
+   }
