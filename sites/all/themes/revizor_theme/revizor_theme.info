@@ -1,0 +1,8 @@
+name = Revizor theme
+description = Theme for Revizor service.
+core = 7.x
+base theme = bootstrap
+
+stylesheets[all][] = 'css/styles.css'
+stylesheets[all][] = 'css/icomoon.css'
+stylesheets[all][] = 'css/social-icons.css'
